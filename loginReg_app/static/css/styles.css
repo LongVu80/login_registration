@@ -1,0 +1,18 @@
+body{
+    background-color: goldenrod;
+}
+.navbar{
+    background-color: gray;
+    color: white;
+    float: right;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
