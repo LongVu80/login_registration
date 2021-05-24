@@ -10,7 +10,7 @@ def login(request):
     user = User.objects.filter(username = request.POST['username'])
     if user:
         userLogin = user[0]
-        if bcrypt.checkpw(request.POST['password'].encode(), userLogin.password.encoded()):
+        if bcrypt.checkpw(request.POST['password'].encode(), userLogin.password.encode()):
             request.session['user_id'] = userLogin.id
             messages.success(request, "you have successfully logged in!!")
             return redirect('/success/')
